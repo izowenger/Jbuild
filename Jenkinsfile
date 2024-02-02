@@ -1,4 +1,4 @@
-def pipelineContext = [:]
+
 node {
 
    def registryProjet='registry.gitlab.com/ismaila14cisse/presentations-jenkins'
@@ -6,7 +6,7 @@ node {
 
 
     stage('Clone') {
-    	 git 'https://github.com/izowenger/Jbuild.git'
+    	                checkout scm
 		}
 
     def img = stage('Build') {
